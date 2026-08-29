@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detrás de Nutrilab</title>
+    <meta name="description" content="Conoce la historia, experiencia y visión detrás de Nutrilab.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nutrilab</a>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="charlas.html">Charlas</a>
+                <a href="talleres.html">Talleres</a>
+                <a href="planificacion-de-menus.html">Planificación de menús</a>
+                <a href="asesorias-practicas.html">Asesorías prácticas</a>
+                <a href="detras-de-nutrilab.html" class="active">Detrás de Nutrilab</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile: centered logo bar -->
+    <div class="mobile-logo-bar">
+        <a href="index.html" class="logo">Nutrilab</a>
+    </div>
+
+    <!-- Mobile: floating pill nav -->
+    <nav class="mobile-nav-pill" id="mobilePill">
+        <a href="index.html">Inicio</a>
+        <div class="pill-servicios-wrapper">
+            <button class="pill-servicios-btn" id="serviciosBtn" onclick="toggleServiciosMenu()" aria-expanded="false">
+                Servicios <span class="arrow">▲</span>
+            </button>
+            <div class="pill-dropdown" id="serviciosDropdown">
+                <a href="charlas.html">Charlas</a>
+                <a href="talleres.html">Talleres</a>
+                <a href="planificacion-de-menus.html">Planificación de Menús</a>
+                <a href="asesorias-practicas.html">Asesorías Prácticas</a>
+            </div>
+        </div>
+        <a href="detras-de-nutrilab.html" class="active">Nosotros</a>
+    </nav>
+
+    <script>
+        function toggleServiciosMenu() {
+            const btn = document.getElementById('serviciosBtn');
+            const dropdown = document.getElementById('serviciosDropdown');
+            const isOpen = dropdown.classList.contains('open');
+            dropdown.classList.toggle('open');
+            btn.classList.toggle('open');
+            btn.setAttribute('aria-expanded', !isOpen);
+        }
+        document.addEventListener('click', function(e) {
+            const wrapper = document.querySelector('.pill-servicios-wrapper');
+            if (wrapper && !wrapper.contains(e.target)) {
+                document.getElementById('serviciosDropdown').classList.remove('open');
+                document.getElementById('serviciosBtn').classList.remove('open');
+            }
+        });
+    </script>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 3rem;">Detrás de Nutrilab</h1>
+
+            <div class="profile-section">
+                <!-- Space for owner photo -->
+                <div class="profile-image-placeholder">
+                    [Espacio para foto de la dueña]
+                </div>
+
+                <!-- Space for experience and vision -->
+                <div class="profile-content-placeholder">
+                    [Espacio para texto sobre experiencia y visión]
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <a href="index.html" class="footer-logo">Nutrilab</a>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.82 1.452 5.532 0 10.032-4.502 10.035-10.037.002-2.68-1.038-5.198-2.93-7.091-1.892-1.893-4.41-2.934-7.096-2.935-5.538 0-10.04 4.502-10.044 10.039-.001 1.705.469 3.374 1.357 4.816l-.994 3.634 3.738-.98c1.47.8 3.1 1.222 4.773 1.222zm7.98-7.716c-.333-.167-1.97-.974-2.278-1.087-.308-.113-.532-.167-.755.167-.223.334-.864 1.087-1.059 1.31-.195.223-.39.25-.724.083-1.808-.907-3.003-1.615-4.2-3.668-.313-.536.312-.497.893-1.655.097-.195.048-.367-.024-.517-.072-.15-1.059-2.5-1.453-3.45-.38-.918-.767-.793-.974-.803-.186-.01-.4-.012-.614-.012-.214 0-.564.08-.86.413-.296.334-1.13 1.102-1.13 2.686 0 1.584 1.152 3.115 1.312 3.332.16.217 2.264 3.457 5.485 4.847.765.33 1.363.528 1.83.676.77.244 1.47.21 2.025.127.618-.093 1.97-.805 2.248-1.585.278-.78.278-1.448.195-1.584-.083-.136-.308-.22-.641-.387z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Correo">
+                        <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 4.712v-9.458l4.623 4.746zm1.077 1.106l3.475 3.567c.228.232.535.348.825.348h.001c.29 0 .597-.116.825-.348l3.474-3.567 4.63 4.757h-16.486l4.259-4.759v.002zm1.096-1.125l4.604-4.733v9.479l-4.604-4.746zm12.581 5.89l-4.623-4.755 4.623-4.746v9.501zm-19.377-11.8h20v1.737l-10 10.27-10-10.27v-1.737z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-title">Mapa Web</div>
+                <ul class="footer-sitemap">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="charlas.html">Charlas</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="planificacion-de-menus.html">Planificación de Menús</a></li>
+                    <li><a href="asesorias-practicas.html">Asesorías Prácticas</a></li>
+                    <li><a href="detras-de-nutrilab.html">Detrás de Nutrilab</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <!-- Empty Column for Visual Spacing / Alignment -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 Nutrilab. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
