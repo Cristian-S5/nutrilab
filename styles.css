@@ -60,6 +60,13 @@ header {
     transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* Reduce logo image size in header and footer */
+.logo img.logo-image,
+.footer-logo img.logo-image {
+    height: 2.5rem;
+    width: auto;
+}
+
 .logo::after {
     content: '';
     display: inline-block;
@@ -155,11 +162,11 @@ nav a:active {
     }
 
     /* Show the mobile top logo bar with glassmorphic look */
-    .mobile-logo-bar {
+        .mobile-logo-bar {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem 1.5rem;
+        padding: 0.8rem 1.2rem; /* reduced height by 20% */
         background-color: rgba(255, 255, 255, 0.92);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
@@ -176,7 +183,7 @@ nav a:active {
         justify-content: space-around;
         align-items: center;
         position: fixed;
-        bottom: 1.5rem;
+        top: calc(0.8rem + 2.5mm); /* gap after logo bar */
         left: 50%;
         transform: translateX(-50%);
         z-index: 200;
