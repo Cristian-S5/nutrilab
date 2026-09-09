@@ -90,9 +90,7 @@
         <!-- Body Section for Images and Text -->
         <div class="container">
             <div class="grid-2">
-                <div class="empty-image-container">
-                    [Espacio para Imágenes de Asesorías Prácticas]
-                </div>
+
                 <div class="service-description">
                     <p>
                         Cada organización enfrenta desafíos distintos. Por eso desarrollamos asesorías a medida que integran nutrición, hábitos saludables y talleres prácticos de cocina para facilitar la implementación de cambios sostenibles.
@@ -100,6 +98,9 @@
                     <p>
                         Trabajamos junto a la empresa para identificar oportunidades de mejora, diseñar acciones concretas y acompañar a los equipos en el proceso de transformación hacia un entorno laboral más saludable.
                     </p>
+                </div>
+                <div class="charla-carousel">
+                    <img id="asesorias-carousel-img" src="Assets/asesorias/SFF_1329_Editar.webp" alt="Asesoría 1">
                 </div>
             </div>
 
@@ -117,6 +118,20 @@
             </section>
         </div>
     </main>
+    <script>
+        const asesoriaImages = [
+            'Assets/asesorias/SFF_1329_Editar.webp',
+            'Assets/asesorias/SFF_1369_Editar.webp',
+            'Assets/asesorias/SFF_1413_Editar.webp',
+            'Assets/asesorias/SFF_1415_Editar.webp'
+        ];
+        let asesoriaIdx = 0;
+        const asesoriaImg = document.getElementById('asesorias-carousel-img');
+        setInterval(() => {
+            asesoriaIdx = (asesoriaIdx + 1) % asesoriaImages.length;
+            asesoriaImg.src = asesoriaImages[asesoriaIdx];
+        }, 1000);
+    </script>
 
     <footer>
         <div class="footer-grid">
