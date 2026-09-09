@@ -6,6 +6,7 @@
     --color-brand-accent: #facd4d;
     /* For specific brand backgrounds/accents */
     --color-bg-white: #ffffff;
+    --color-bg-page: #fffdf5;
     /* Main web background */
     --color-text-dark: #1e293b;
     --color-text-muted: #64748b;
@@ -23,7 +24,7 @@
 
 body {
     font-family: var(--font-sans);
-    background-color: var(--color-bg-white);
+    background-color: var(--color-bg-page);
     color: var(--color-text-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -418,7 +419,7 @@ img {
 
 /* Positioning Tagline */
 .positioning-section {
-    background-color: var(--color-bg-white);
+    background-color: var(--color-bg-page);
     padding: 5rem 2rem;
     text-align: center;
 }
@@ -957,6 +958,33 @@ textarea.form-control {
     margin: 0;
 }
 
+/* Service page text alignment */
+.service-detail-page .positioning-section,
+.service-detail-page .benefits-section {
+    text-align: center;
+}
+
+.service-detail-page .benefits-section .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service-detail-page .benefits-list {
+    text-align: left;
+}
+
+.service-detail-page .benefits-list li {
+    padding-right: 0;
+    padding-left: 2rem;
+}
+
+/* The copy beside each carousel is the only desktop text aligned to the right. */
+@media (min-width: 769px) {
+    .service-detail-page .service-description {
+        text-align: right;
+    }
+}
+
 /* Home page section rhythm */
 .home-page .positioning-section {
     padding: 4rem 2rem;
@@ -1037,6 +1065,20 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+
+    .service-detail-page .positioning-section,
+    .service-detail-page .benefits-section {
+        text-align: center;
+    }
+
+    .service-detail-page .benefits-list {
+        text-align: left;
+    }
+
+    .service-detail-page .service-description {
+        text-align: center;
+    }
+
     .benefits-list {
         grid-template-columns: 1fr;
         gap: 1.25rem;
