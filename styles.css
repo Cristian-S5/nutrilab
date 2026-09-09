@@ -546,6 +546,10 @@ img {
         gap: 1.25rem;
     }
 
+    .comments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .client-logo-placeholder {
         height: 85px;
         font-size: 0.85rem;
@@ -640,6 +644,44 @@ img {
 
 .highlight-text p {
     margin: 0;
+}
+
+/* Client comments */
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.comment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.client-photo-placeholder {
+    width: 128px;
+    aspect-ratio: 1;
+    border: 2px dashed var(--color-border);
+    border-radius: 50%;
+    background-color: #f8fafc;
+}
+
+.comment-client-name {
+    margin-top: 1.25rem;
+    color: var(--color-brand-primary);
+    font-size: 1.25rem;
+}
+
+.comment-client-text {
+    margin-top: 0.5rem;
+    color: var(--color-text-dark);
+    line-height: 1.6;
 }
 
 .charla-carousel {
