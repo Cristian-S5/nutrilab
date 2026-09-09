@@ -69,8 +69,8 @@
 
             <div class="profile-section">
                 <!-- Space for owner photo -->
-                <div class="profile-image-placeholder">
-                    [Espacio para foto de la dueña]
+                <div class="charla-carousel">
+                    <img id="nosotro-carousel-img" src="Assets/nosotro/SFF_1035_Editar.webp" alt="Nosotros 1">
                 </div>
 
                 <!-- Space for experience and vision -->
@@ -116,7 +116,20 @@
             <div class="footer-copy">
                 &copy; 2026 Nutrilab. Todos los derechos reservados.
             </div>
-        </div>
+        <script>
+  const nosotroImages = [
+    'Assets/nosotro/SFF_1035_Editar.webp',
+    'Assets/nosotro/SFF_1288_Editar.webp',
+    'Assets/nosotro/SFF_1364_Editar.webp',
+    'Assets/nosotro/SFF_1473_Editar.webp'
+  ];
+  let nosotroIdx = 0;
+  const nosotroImg = document.getElementById('nosotro-carousel-img');
+  setInterval(() => {
+    nosotroIdx = (nosotroIdx + 1) % nosotroImages.length;
+    nosotroImg.src = nosotroImages[nosotroIdx];
+  }, 1000);
+</script>
     </footer>
 
 </body>
