@@ -623,7 +623,60 @@ img {
     padding: 2rem;
 }
 
+/* Highlight text before comments */
+.highlight-text {
+  background: transparent;
+  border: 3px solid #FFD700; /* Yellow border */
+  color: var(--color-brand-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.highlight-text p {
+  margin: 0;
+}
+
+.charla-carousel {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.charla-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .empty-image-container {
+  width: 100%;
+  min-height: 300px;
+  background-color: #f1f5f9;
+  border: 2px dashed var(--color-text-muted);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.charla-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
     width: 100%;
     min-height: 300px;
     background-color: #f1f5f9;
@@ -764,6 +817,25 @@ img {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        grid-template-areas:
+            "image"
+            "text"
+            "form";
+    }
+    .why-invest-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .why-invest-image {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 1rem;
+    }
+    .contact-image,
+    .contact-text-content,
+    .contact-grid form {
+        margin-bottom: 1rem;
     }
 }
 

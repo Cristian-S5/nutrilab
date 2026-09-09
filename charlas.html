@@ -83,9 +83,9 @@
         <!-- Body Section for Images and Text -->
         <div class="container">
             <div class="grid-2">
-                <div class="empty-image-container">
-                    [Espacio para Imágenes de Charlas]
-                </div>
+                <div class="charla-carousel">
+  <img id="charla-carousel-img" src="Assets/charla/charla1.webp" alt="Charla 1">
+</div>
                 <div class="service-description">
                     <p>
                         Nuestras charlas están diseñadas para acercar conceptos de nutrición y bienestar de forma clara, dinámica y aplicable a la realidad laboral.
@@ -137,7 +137,20 @@
                     <li><a href="asesorias-practicas.html">Asesorías Prácticas</a></li>
                     <li><a href="detras-de-nutrilab.html">Detrás de Nutrilab</a></li>
                 </ul>
-            </div>
+            <script>
+  const charlaImages = [
+    'Assets/charla/charla1.webp',
+    'Assets/charla/charla2.webp',
+    'Assets/charla/charla3.webp',
+    'Assets/charla/charla4.webp'
+  ];
+  let charlaIdx = 0;
+  const charlaImg = document.getElementById('charla-carousel-img');
+  setInterval(() => {
+    charlaIdx = (charlaIdx + 1) % charlaImages.length;
+    charlaImg.src = charlaImages[charlaIdx];
+  }, 1000);
+</script>
             <div class="footer-column">
                 <!-- Empty Column for Visual Spacing / Alignment -->
             </div>
