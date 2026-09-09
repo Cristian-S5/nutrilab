@@ -546,10 +546,6 @@ img {
         gap: 1.25rem;
     }
 
-    .comments-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .client-logo-placeholder {
         height: 85px;
         font-size: 0.85rem;
@@ -682,6 +678,25 @@ img {
     margin-top: 0.5rem;
     color: var(--color-text-dark);
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .comments-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .comment-card {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .client-photo-placeholder {
+        width: 96px;
+    }
+
+    .comment-client-name {
+        font-size: 1.05rem;
+    }
 }
 
 .charla-carousel {
