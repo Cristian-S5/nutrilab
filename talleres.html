@@ -83,9 +83,6 @@
         <!-- Body Section for Images and Text -->
         <div class="container">
             <div class="grid-2">
-                <div class="empty-image-container">
-                    [Espacio para Imágenes de Talleres]
-                </div>
                 <div class="service-description">
                     <p>
                         Los talleres combinan contenido práctico, participación activa y herramientas concretas para que los colaboradores puedan aplicar lo aprendido desde el primer día.
@@ -94,6 +91,9 @@
                         A través de dinámicas grupales, actividades participativas y ejercicios prácticos, transformamos conceptos nutricionales en acciones simples que pueden incorporarse fácilmente a la rutina laboral y personal.
                     </p>
                 </div>
+                <div class="charla-carousel">
+    <img id="talleres-carousel-img" src="Assets/Talleres/SFF_1458_Editar.webp" alt="Talleres 1">
+</div>
             </div>
 
             <!-- Beneficios -->
@@ -110,6 +110,20 @@
             </section>
         </div>
     </main>
+    <script>
+        const tallerImages = [
+            'Assets/Talleres/SFF_1458_Editar.webp',
+            'Assets/Talleres/SFF_1467_Editar.webp',
+            'Assets/Talleres/SFF_1493_Editar_2.webp',
+            'Assets/Talleres/SFF_1504_Editar.webp'
+        ];
+        let tallerIdx = 0;
+        const tallerImg = document.getElementById('talleres-carousel-img');
+        setInterval(() => {
+            tallerIdx = (tallerIdx + 1) % tallerImages.length;
+            tallerImg.src = tallerImages[tallerIdx];
+        }, 1000);
+    </script>
 
     <footer>
         <div class="footer-grid">
