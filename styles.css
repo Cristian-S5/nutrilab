@@ -633,7 +633,7 @@ img {
     border-radius: 12px;
     text-align: center;
     margin: 2rem 0;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -715,7 +715,7 @@ img {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr 1.25fr;
+    grid-template-columns: 0.9fr 1.15fr 1.25fr;
     grid-template-areas: "form text image";
     gap: 2.5rem;
     align-items: start;
