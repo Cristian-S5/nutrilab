@@ -752,7 +752,8 @@ img {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr 1.25fr;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    grid-template-areas: "form image";
     gap: 2.5rem;
     align-items: start;
 }
@@ -803,9 +804,8 @@ img {
         grid-template-columns: 1fr;
         gap: 2rem;
         grid-template-areas:
-            "image"
-            "text"
-            "form";
+            "form"
+            "image";
     }
 
     .why-invest-card {
@@ -940,6 +940,41 @@ textarea.form-control {
 }
 
 /* Service Detail: Description & Benefits */
+.service-detail-page .positioning-section {
+    padding: 4rem 2rem;
+}
+
+.service-detail-page .container {
+    padding-top: 0;
+    padding-bottom: 4rem;
+}
+
+.service-detail-page .grid-2 {
+    margin-bottom: 4rem;
+}
+
+.service-detail-page .benefits-section {
+    margin: 0;
+}
+
+/* Home page section rhythm */
+.home-page .positioning-section {
+    padding: 4rem 2rem;
+}
+
+.home-page .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.home-page .why-invest-section,
+.home-page .highlight-text,
+.home-page .comments-section,
+.home-page .contact-section,
+.home-page .clients-section {
+    margin: 0 0 4rem;
+}
+
 .service-description {
     display: flex;
     flex-direction: column;
@@ -960,6 +995,11 @@ textarea.form-control {
     border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 2.25rem 2.5rem;
+}
+
+.benefits-cta {
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
 .benefits-list {
