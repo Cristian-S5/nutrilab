@@ -550,17 +550,17 @@ img {
     color: var(--color-brand-primary);
     margin-bottom: 1.5rem;
     position: relative;
-    padding-bottom: 0.5rem;
 }
 
-.section-title::after {
+.section-title::before {
     content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
     background-color: var(--color-brand-accent);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    vertical-align: middle;
 }
 
 /* Why Invest Section */
@@ -1263,10 +1263,7 @@ textarea.form-control {
     text-align: center;
 }
 
-.service-detail-page .benefits-section .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 
 .service-detail-page .benefits-list {
     text-align: left;
