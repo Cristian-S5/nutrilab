@@ -129,20 +129,22 @@
             <div class="footer-copy">
                 &copy; 2026 Nutrilab. Todos los derechos reservados.
             </div>
-            <script>
-                const nosotroImages = [
-                    'Assets/nosotro/SFF_1035_Editar.webp',
-                    'Assets/nosotro/SFF_1288_Editar.webp',
-                    'Assets/nosotro/SFF_1364_Editar.webp',
-                    'Assets/nosotro/SFF_1473_Editar.webp'
-                ];
-                let nosotroIdx = 0;
-                const nosotroImg = document.getElementById('nosotro-carousel-img');
-                setInterval(() => {
-                    nosotroIdx = (nosotroIdx + 1) % nosotroImages.length;
-                    nosotroImg.src = nosotroImages[nosotroIdx];
-                }, 1000);
-            </script>
+        </div>
+        <img src="Assets/isonl.png" alt="" class="footer-isotipo" aria-hidden="true">
+        <script>
+            const nosotroImages = [
+                'Assets/nosotro/SFF_1035_Editar.webp',
+                'Assets/nosotro/SFF_1288_Editar.webp',
+                'Assets/nosotro/SFF_1364_Editar.webp',
+                'Assets/nosotro/SFF_1473_Editar.webp'
+            ];
+            let nosotroIdx = 0;
+            const nosotroImg = document.getElementById('nosotro-carousel-img');
+            setInterval(() => {
+                nosotroIdx = (nosotroIdx + 1) % nosotroImages.length;
+                nosotroImg.src = nosotroImages[nosotroIdx];
+            }, 1000);
+        </script>
     </footer>
 
 </body>
